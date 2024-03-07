@@ -1,0 +1,49 @@
+// Tạo Database
+CREATE DATABASE tên_database;
+//ví dụ
+CREATE DATABASE  testvn;
+
+// Hiển thị tất cả các Database hiện tại
+
+SHOW DATABASES;
+
+// tạo bảng
+
+CREATE TABLE student(
+    id INT,
+    fullname VARCHAR(225),
+    age INT NOT NULL USSIGNED,
+    created_date DATETIME,
+    updated_date DATETIME )
+
+
+// insert
+
+INSERT INTO student
+VALUES
+(1, 'Ha Van Binh', 12, '2003-02-22')
+
+// insert in to
+
+INSERT INTO student (id, fullname)
+VALUES
+(1, ‘Hà Văn Bình’),
+(2, ‘Trần Long’)
+
+// PRIMARY KEY: Tạo làm khoá chính, không thể trùng lặp
+// AUTO_INCREMENT: Tự tăng
+
+
+CREATE TABLE student (
+id INT PRIMARY KEY AUTO_INCREMENT,
+student_name VARCHAR(50)
+)
+
+//  UNIQUE: Giá trị trong cột là duy nhất
+
+
+CREATE TABLE student (
+id INT PRIMARY KEY AUTO_INCREMENT,
+student_name VARCHAR(50) ,
+email VARCHAR(50) UNIQUE
+)
